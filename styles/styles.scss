@@ -7,3 +7,40 @@
 html {
     font-size: 62.5%;
 }
+
+body {
+    @include fontSize(16);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.hero-header {
+    padding: 10px;
+    &__header-container {
+        display: flex;
+        flex-direction: column;
+        &__header-primary {
+            // text-align: center;
+            color: $primaryColour;
+            @include fontSize(35);
+            order: 2;        }
+        &__header-2 {
+            order: 1;
+        }
+        &__header-3 {
+            order: 0;
+        }
+        &__header-4 {
+            order: 3;
+        }
+        &__link {
+            order: 4;
+        }
+        &__icon {
+            order: 5;
+        }
+    }
+}

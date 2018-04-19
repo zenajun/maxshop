@@ -11,23 +11,25 @@
 
 <body>
     <!-------------- Global nav begins -->
-    <header class="header">
-        <nav class="header__global-nav">
-            <img class="header__global-nav__logo" src="images/logo.png" alt="">
-            <ul class="header__global-nav__list">
-                <li class="header__global-nav__list__item"><a class="header__global-nav__list__item__link" href="#">Home</a></li>
-                <li class="header__global-nav__list__item"><a class="header__global-nav__list__item__link" href="#">Shop</a></li>
-                <li class="header__global-nav__list__item"><a class="header__global-nav__list__item__link" href="#">Look Book</a></li>
-                <li class="header__global-nav__list__item"><a class="header__global-nav__list__item__link" href="#">Contact</a></li>
-                <li class="header__global-nav__list__item"><a class="header__global-nav__list__item__link" href="#">Blog</a></li>
+    <header class="nav-header">
+        <nav class="nav-header__global-nav">
+            <img class="nav-header__global-nav__logo" src="images/logo.png" alt="">
+            <ul class="nav-header__global-nav__list">
+                <label for="toggle"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" id="toggle">
+                <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Home</a></li>
+                <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Shop</a></li>
+                <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Look Book</a></li>
+                <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Contact</a></li>
+                <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Blog</a></li>
             </ul>        
         </nav>
-        <nav class="shopping-nav">
-            <!-------------- Country drop down -->
-            <ul>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="far fa-user"></i></a></li>
-                <li><a href="#"><img src="images/shopping-bag.png" alt=""></a></li>
+        <nav class="nav-header__shopping-nav">
+            <ul class="nav-header__shopping-nav__list">
+                <li>Flag</li>    
+                <li class="nav-header__shopping-nav__list__item"><a href="#" class="nav-header__shopping-nav__list__item__link"><i class="fas fa-search"></i></a></li>
+                <li class="nav-header__shopping-nav__list__item"><a href="#" class="nav-header__shopping-nav__list__item__link"><i class="far fa-user"></i></a></li>
+                <li class="nav-header__shopping-nav__list__item"><a href="#" class="nav-header__shopping-nav__list__item__link"><i class="fas fa-shopping-bag"></i></a></li>
             </ul>     
         </nav>
     </header>
@@ -37,15 +39,17 @@
     <header class="hero-header">
         <!-- flexbox order -->
         <!-- position absolute -->
-        <h1>Summer collection 2016 &rdquo;</h1>
-        <h2>Bring glamour to your wardrobe</h2>
-        <h3>26/02/2016</h3>
-        <h4>01</h4>
-        <a href="#">View More</a>
-        <img src="images/main-image-1.png" alt="White dresses hanging on white hangers">
-        <img src="images/icon.png" alt="Navigation menu">
+        <div class="hero-header__header-container">
+            <h1 class="hero-header__header-container__header-primary">Summer collection 2016 &rdquo;</h1>
+            <h2 class="hero-header__header-container__header-2">Bring glamour to your wardrobe</h2>
+            <h3 class="hero-header__header-container__header-3">26/02/2016</h3>
+            <h4 class="hero-header__header-container__header-4">01</h4>
+            <a class="hero-header__header-container__link" href="#">View More</a>
+            <img class="hero-header__header-container__icon" src="images/icon.png" alt="Navigation menu">
+        </div>
         <div>
             <nav>
+                <img src="images/main-image-1.png" alt="White dresses hanging on white hangers">
                 <ul>
                     <li>
                         <a href="#">
