@@ -8,19 +8,32 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        overflow: hidden;
         &__logo {
             display: block;
             width: 75%;
          }
-        &__list {
-            justify-content: space-around;
-            list-style: none;
-            padding: 0;
+         &__list {
+             justify-content: space-around;
+             list-style: none;
+             padding: 0;
             &__item__link {
                 text-decoration: none;
                 color: lighten($color: $primaryColour, $amount: 20);
             }
         }
+        #toggle {
+            display: none;
+        }
+        #toggle:not(:checked) + ul {
+            display: none;
+            // visibility: hidden;
+        }
+        #toggle:checked + ul {
+            display: block;
+            // visibility: visible;
+        }
+
     }
     &__shopping-nav {
         &__list {
