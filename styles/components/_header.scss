@@ -1,0 +1,28 @@
+.header {
+    min-width: 320px;
+    &__global-nav {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
+        &__logo {
+            display: block;
+            margin: 0 auto;
+        }
+        &__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            &__item {
+                @include fontSize(20);
+                &__link {
+                    text-decoration: none;
+                    color: lighten($color: $primaryColour, $amount: 20);
+
+                }
+            }
+
+        }
+    }
+}
