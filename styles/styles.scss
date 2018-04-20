@@ -111,7 +111,28 @@ img {
     }
 }
 
-// View More Style
-//  &__link {
-     
-//  }
+.section {
+    &__container {
+        margin-bottom: 60px;
+        &__header-2 {
+            color: $primaryColour;
+            @include fontSize(28);
+            background: white;
+            text-align: center;
+            font-family: $primaryFont;
+            font-weight: 700;
+        }
+        &__header-3 {
+            font-family: $secondaryFont;
+            color: $primaryColour;
+            text-align: center;
+        }
+        &__link {
+            &__image {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+    }
+}
