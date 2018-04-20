@@ -10,6 +10,7 @@ html {
 
 body {
     @include fontSize(16);
+    font-family: $primaryFont;
 }
 
 img {
@@ -24,17 +25,21 @@ img {
         flex-direction: column;
         position: relative;
         &__header-primary {
-            // text-align: center;
             color: $primaryColour;
             @include fontSize(35);
-            order: 2;        }
+            margin-top: 0;
+        }
         &__header-2 {
-            order: 1;
+            order: -1;
+            font-family: $secondaryFont;
+            color: $lighterColour;
+            @include fontSize(20);
+            font-weight: 400;
+
         }
         &__header-3 {
-            order: 0;
+            order: -2;
             color: $primaryColour;
-            font-family: $primaryFont;
             @include fontSize(16);
             font-weight: 400;
         }
@@ -48,14 +53,65 @@ img {
             left: 0;
         }
         &__header-4 {
-            order: 3;
-        }
-        &__link {
-            order: 4;
+            // order: 1;
+            display: none;
         }
         &__icon {
-            order: 5;
+            order: 3;
             display: none;
         }
     }
+    &__image-container {
+        &__image {
+            margin-bottom: 50px;
+        }
+        &__nav {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            &__link {
+                text-decoration: none;
+                background: $accentColour;
+                padding: 20px 40px;
+                border-radius: 35px;
+                text-align: center;
+                color: white;
+                font-weight: 400;
+                @include fontSize(18);
+                height: 60px;
+            }
+            &__list {
+                list-style: none;
+                display: flex;
+                padding: 0;
+                margin: 0;
+                justify-content: space-around;
+                position: absolute;
+                right: 0;
+                bottom: 100px;
+                background: white;
+                &__item {
+                    width: 85px;
+                    height: 80px;
+                    // text-align-last: right;
+                    &__link {
+                        @include fontSize(60);
+                        color: lighten($color: $primaryColour, $amount: 20);
+                        padding: 10px;
+                    }
+                    &__link:hover {
+                        color: $accentColour;
+                    }
+                }
+                &__item:last-child {
+                    
+                }
+            }
+        }
+    }
 }
+
+// View More Style
+//  &__link {
+     
+//  }
