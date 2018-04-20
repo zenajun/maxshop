@@ -25,11 +25,11 @@
         #toggle {
             display: none;
         }
-        #toggle:not(:checked) + ul {
+        #toggle:not(:checked) + &__list {
             display: none;
             // visibility: hidden;
         }
-        #toggle:checked + ul {
+        #toggle:checked + &__list {
             display: block;
             // visibility: visible;
         }
