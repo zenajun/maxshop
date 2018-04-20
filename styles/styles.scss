@@ -16,7 +16,7 @@ img {
     display: block;
     max-width: 100%;
 }
-
+// Hero header
 .hero-header {
     padding: 10px;
     &__header-container {
@@ -106,6 +106,7 @@ img {
     }
 }
 
+// Section: Current promotions
 .section {
     &__container {
         margin-bottom: 60px;
@@ -145,3 +146,47 @@ img {
         }
     }
 }
+
+// Section: Header styles for Top Products and Summer Sale
+
+.section {
+    &__header-2 {
+        font-family: $primaryFont;
+        color: lighten($color: $primaryColour, $amount: 60);
+        font-weight: 400;
+        @include fontSize(35);
+        text-align: center;
+    }
+    &__header-3 {
+        font-family: $primaryFont;
+        color: $primaryColour;
+        font-weight: 400;
+        text-align: center;
+        @include fontSize(20);
+    }
+    &__title {
+        text-align: center;
+        font-family: $secondaryFont;
+        @include fontSize(18);    
+        &__nav {
+            &__list {
+                padding: 0;
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                &__item {
+                    &__link {
+                        text-decoration: none;
+                        color: $lighterColour;
+                        &:hover {
+                            color: $primaryColour; 
+                        }
+                    }
+                    
+                }
+            }
+        }    
+    }
+}
+
+
