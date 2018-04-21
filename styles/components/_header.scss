@@ -4,6 +4,7 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    // height: 20vh;
     &__global-nav {
         display: flex;
         flex-direction: column;
@@ -29,7 +30,7 @@
             display: none;
             // visibility: hidden;
         }
-        #toggle:checked + &__list {
+        #toggle:checked + &__list +  {
             display: block;
             // visibility: visible;
         }

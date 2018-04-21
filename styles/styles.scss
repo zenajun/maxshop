@@ -19,6 +19,7 @@ img {
 // Hero header
 .hero-header {
     padding: 10px;
+    // height: 80vh;
     &__header-container {
         display: flex;
         flex-direction: column;
@@ -76,7 +77,6 @@ img {
                 color: white;
                 font-weight: 400;
                 @include fontSize(18);
-                height: 60px;
             }
             &__list {
                 list-style: none;
@@ -147,8 +147,7 @@ img {
     }
 }
 
-// Section: Header styles for Top Products and Summer Sale
-
+// Section 2 and 4: Header styles for Top Products and Summer Sale
 .section {
     &__header-2 {
         font-family: $primaryFont;
@@ -181,12 +180,61 @@ img {
                         &:hover {
                             color: $primaryColour; 
                         }
-                    }
-                    
+                    }                    
                 }
             }
         }    
     }
 }
 
+// Section 2 and 4: Gallery styles
+
+.section__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &__product{
+        &__images{
+            position: relative;
+            &__link {
+                &--buy {
+                    position: absolute;
+                    background: darken($color: $lighterColour, $amount: 49);
+                    padding: 5px 10px;
+                    bottom: -5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    &:hover {
+                        background: $accentColour;
+                    }
+                }
+            }            
+        }
+    &__description {
+            font-family: $secondaryFont;
+            margin: 15px 0;
+            &__link {
+                text-decoration: none;
+                color: darken($color: $lighterColour, $amount: 40);
+            }
+            &__clothing-article {
+                color: $lighterColour;
+                font-weight: 300;
+            }
+            &__cost {
+                color: $primaryColour;
+                font-family: $primaryFont;
+                word-spacing: 1.5rem;
+                &::first-letter {
+                    padding-right: 5px;
+                }
+                &--sale {
+                    @include fontSize(15);
+                    color: $lighterColour;
+                    text-decoration: line-through;
+                }
+            }
+        }                     
+    }
+}
 
