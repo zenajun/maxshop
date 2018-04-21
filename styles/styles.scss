@@ -147,7 +147,7 @@ img {
     }
 }
 
-// Section 2 and 4: Header styles for Top Products and Summer Sale
+// Section Header styles
 .section {
     &__header-2 {
         font-family: $primaryFont;
@@ -161,11 +161,12 @@ img {
         color: $primaryColour;
         font-weight: 400;
         text-align: center;
-        @include fontSize(20);
+        @include fontSize(30);
     }
     &__title {
         text-align: center;
         font-family: $secondaryFont;
+        color: $lighterColour;
         @include fontSize(18);    
         &__nav {
             &__list {
@@ -188,7 +189,6 @@ img {
 }
 
 // Section 2 and 4: Gallery styles
-
 .section__gallery {
     display: flex;
     flex-wrap: wrap;
@@ -237,4 +237,7 @@ img {
         }                     
     }
 }
+
+// Section 3: Lookbook
+
 
