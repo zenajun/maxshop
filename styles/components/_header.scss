@@ -2,9 +2,20 @@
 .nav-header {
     margin: 0 auto;
     padding: 10px;
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     // height: 20vh;
+    #toggle {
+        display: none;
+    }
+    #toggle:not(:checked) + &__global-nav {
+        display: none;
+        // visibility: hidden;
+    }
+    #toggle:checked + &__global-nav +  {
+        display: block;
+        // visibility: visible;
+    }
     &__global-nav {
         display: flex;
         flex-direction: column;
@@ -22,17 +33,6 @@
                 text-decoration: none;
                 color: lighten($color: $primaryColour, $amount: 20);
             }
-        }
-        #toggle {
-            display: none;
-        }
-        #toggle:not(:checked) + &__list {
-            display: none;
-            // visibility: hidden;
-        }
-        #toggle:checked + &__list +  {
-            display: block;
-            // visibility: visible;
         }
 
     }
