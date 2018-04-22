@@ -311,11 +311,8 @@ img {
                     top: 50%;
                     left: 50%;
                     transform: translateY(-50%) translateX(-50%);
-                    z-index: 30;
-                    
+                    z-index: 30;                    
                     // @include fontSize(20);
-
-
                 } 
                 &__link {
                     color: white;
@@ -362,6 +359,41 @@ img {
             color: lighten($color: $primaryColour, $amount: 20);
             line-height: 2.8rem;
             margin: 5px;
+        }
+    }
+}
+
+.section__nav-container {
+    &__arrow-nav {
+        &__list {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            &__item {
+                &:nth-child(2)::before {
+                    content: '';
+                    height: 35px;
+                    width: 4px;
+                    background: lighten($color: $primaryColour, $amount: 72);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+                    z-index: 30;
+                }                
+                &__link {
+                    @include fontSize (40);
+                    line-height: 0;
+                    padding: 0 10px;      
+                    color: lighten($color: $primaryColour, $amount: 20);
+                    &:hover {
+                        color: $accentColour;
+                    }              
+                }
+            }          
         }
     }
 }
