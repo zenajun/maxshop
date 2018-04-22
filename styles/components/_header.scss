@@ -18,23 +18,27 @@
     }
     &__global-nav {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
         overflow: hidden;
         &__logo {
-            display: block;
-            width: 75%;
+            // display: block;
          }
          &__list {
-             justify-content: space-around;
-             list-style: none;
-             padding: 0;
-            &__item__link {
-                text-decoration: none;
-                color: lighten($color: $primaryColour, $amount: 20);
+            justify-content: space-around;
+            list-style: none;
+            padding: 5px 0;
+            &__item {
+                padding: 10px 0;
+                &__link {
+                    text-decoration: none;
+                    color: lighten($color: $primaryColour, $amount: 20);
+                    padding: 5px 0;
+                    &:hover {
+                        border-bottom: 2px solid $accentColour;
+                    }
+                }
             }
         }
-
     }
     &__shopping-nav {
         &__list {
@@ -43,7 +47,7 @@
             margin: 0;
             height: 100%;
             &__item {
-                padding: 0 5px;
+                padding: 0 15px;
                 &__link {
                    color: lighten($color: $primaryColour, $amount: 20); 
                 }
