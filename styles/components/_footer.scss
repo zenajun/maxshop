@@ -1,5 +1,4 @@
-@import '../typography';
-
+// Footer 1: Promotions
 .footer__promo {
     // position: relative;
     &__container {
@@ -51,4 +50,92 @@
 
 
     }
+}
+
+// Footer 2: Global footer
+
+.footer__global {
+    background: darken($color: $lighterColour, $amount: 46);
+    &__container {
+        padding: 5px;
+        color: white;
+        &__header-2 {
+            text-transform: uppercase;
+            color: $accentColour;
+        }
+        // Contact
+        &.contact &__list {
+            list-style: none;
+            padding: 0;
+            &__item {
+                font-family: $secondaryFont;
+                &__link {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        } 
+        &.tags &__link {
+            @include fontSize(14);
+            display: inline-block;
+            margin: 2px;
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border: 1px solid white;
+            font-family: $secondaryFont;
+            &:hover {
+                border: 1px solid $accentColour;
+                color: $accentColour;
+            }
+        }
+        &.instagram {
+            display: none;
+        }      
+        &.newsletter &__header-3 {
+            @include fontStyle ($secondaryFont, 16, 400);
+        }  
+        &.newsletter &__form {
+            font-family: $secondaryFont;
+            &--email {
+                border: 1px solid white;
+                color: white;
+                    &[placeholder] {
+                        background: transparent;
+                        padding: 15px;
+                    }
+            }
+            &--submit {
+                color: $accentColour;
+                border: 1px solid $accentColour;
+                padding: 15px;
+                background:transparent;
+
+            }
+        }
+        &.follow-us &__list{
+            list-style: none;
+            padding: 0;
+            display: flex;
+            &__item {
+                &__link {
+                    color: white;
+                    text-decoration: none;
+                    & span:hover {
+                        color: $accentColour;
+                    }
+                    & span:first-child {
+                        display: none;                    
+                    }
+                    & span:last-of-type {
+                        display: inline-block;
+                        padding: 5px;
+                    }
+                }
+            }
+        } 
+
+    }
+
+
 }
