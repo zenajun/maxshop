@@ -53,6 +53,19 @@
                 &__link {
                    color: lighten($color: $primaryColour, $amount: 20); 
                 }
+                &__country {
+                    background: url(../../images/flag-arrow.png) no-repeat 90% center;
+                    -moz-appearance: window;
+                    -webkit-appearance: none;
+                    width: 90px;
+                    border: none;
+                    text-align: right;
+                    padding-left: 30px;
+                    text-align: right;
+                    &__flag {
+                        background: url(../../images/flag-uk.png) no-repeat left center;
+                    }
+                }
             }
         }
     }
