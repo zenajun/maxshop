@@ -36,21 +36,21 @@ img {
                 @include fontSize(80);
                 width: 750px;
                 position: absolute;
-                top: 20%;
+                top: 15%;
             }
         }
         &__header-2 {
-            order: -1;
             font-family: $secondaryFont;
             color: $lighterColour;
             @include fontSize(20);
             font-weight: 400;
+            order: -2;
         }
         &__header-3 {
-            order: -2;
             color: $primaryColour;
             @include fontSize(16);
             font-weight: 400;
+            order: -3;
         }
         &__header-3::after {
             content: '';
@@ -62,12 +62,46 @@ img {
             left: 0;
         }
         &__header-4 {
-            // order: 1;
             display: none;
+            @media (min-width: 1040px) {
+                display: block;
+                @include fontSize(300);
+                color: lighten($color: #333333, $amount: 74);
+                margin: 200px 0 0;
+                line-height: 20rem;
+                font-weight: 400;
+            }
         }
         &__icon {
-            order: 3;
             display: none;
+            @media (min-width: 1040px) {
+                display: block;
+                width: 60px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        &__link {
+            display: inline-block;
+            text-decoration: none;
+            background: $accentColour;
+            padding: 20px 40px;
+            border-radius: 35px;
+            text-align: center;
+            color: white;
+            font-weight: 400;
+            width: 180px;
+            @include fontSize(18);
+            &:hover {
+                color: $primaryColour;
+                background: transparent;
+                border: 1px solid $primaryColour;
+            }
+            @media (min-width: 1040px) {
+                position: absolute;
+                top: 65%;
+            }
         }
     }
     &__image-container {
@@ -75,22 +109,12 @@ img {
             width: 63%;
         }
         &__image {
-            margin-bottom: 50px;
+            // margin-bottom: 50px;
         }
         &__nav {
             display: flex;
             justify-content: space-between;
             position: relative;
-            &__link {
-                text-decoration: none;
-                background: $accentColour;
-                padding: 20px 40px;
-                border-radius: 35px;
-                text-align: center;
-                color: white;
-                font-weight: 400;
-                @include fontSize(18);
-            }
             &__list {
                 list-style: none;
                 display: flex;
@@ -99,7 +123,7 @@ img {
                 justify-content: space-around;
                 position: absolute;
                 right: 0;
-                bottom: 100px;
+                bottom: 0;
                 background: white;
                 &__item {
                     width: 85px;
