@@ -24,7 +24,11 @@
                 background: rgba(255, 255, 255, 0.2);
                 border: 1px solid $accentColour;
             }
-        }       
+        }    
+        &:nth-child(1) {
+            background-color: black;
+            background: url(../../images/footer-1.png) no-repeat center center;
+        }   
         &:nth-child(2) {
             background: url(../../images/footer-2.png) no-repeat center center;
         }
@@ -47,11 +51,7 @@
 
 
     }
-    &__container.discover {
-        // background: url(../../images/footer-1.png) no-repeat center center;
-        background: black;
-
-    }
+    
 }
 
 // Footer 2: Global footer
