@@ -3,8 +3,9 @@
     margin: 0 auto;
     padding: 10px;
     justify-content: space-between;
-    @media (min-width: 640px) {
-        // display: flex;
+    @media (min-width: 1040px) {
+        display: flex;
+        justify-content: space-between;
     }
     #toggle {
         display: none;
@@ -31,6 +32,10 @@
         @media (min-width: 640px) {
             flex-direction: column;
         }
+        @media (min-width: 1040px) {
+            flex-direction: row;
+            width: calc(200% / 3);
+        }
         &__logo {
             height: 100%;
          }
@@ -42,14 +47,22 @@
                 display: flex;
                 justify-content: space-around;
             }
+            @media (min-width: 1040px) {
+                margin: 0;
+            }
             &__item {
                 padding: 10px 0;
+                @media (min-width: 1040px) {
+                    padding: 10px;
+                }
                 &__link {
                     text-decoration: none;
                     color: lighten($color: $primaryColour, $amount: 20);
                     padding: 5px 0;
+                    transition: all 0.2s ease;
                     &:hover {
                         border-bottom: 2px solid $accentColour;
+                        color: $primaryColour;
                     }
                 }
             }
@@ -59,17 +72,22 @@
         &__list {
             list-style: none;
             padding: 5px 0;
-            // height: 100%;
             display: flex;
             flex-direction: column;
             @media (min-width: 640px) {
                 flex-direction: row;
                 justify-content: space-around;
             }
+            @media (min-width: 1040px) {
+                margin: 0;
+            }
             &__item {
                 padding: 10px 0px;
                 text-align: right;
                 position: relative;
+                @media (min-width: 1040px) {
+                    padding: 10px;
+                }
                 &__link {
                    color: lighten($color: $primaryColour, $amount: 20); 
                 }

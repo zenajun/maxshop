@@ -358,6 +358,9 @@ img {
 // Section 5: Our Blog
 .section__article {
     margin-bottom: 50px;
+    &__image {
+        margin: 0 auto;
+    }
     &__blog {
         display: flex;
         flex-direction: column;
