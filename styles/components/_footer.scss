@@ -1,0 +1,54 @@
+@import '../typography';
+
+.footer__promo {
+    // position: relative;
+    &__container {
+        background-size: cover;
+        padding: 50px 0 50px 20%;   
+        color: white;
+        &__header-2 {
+            @include fontStyle($primaryFont, 30, 700);
+
+        }
+        &__header-3 {
+            @include fontStyle($secondaryFont, 18, 400);
+        }
+        &__link {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 10px 15px;
+            border-radius: 35px;
+            &:hover {
+                color: black;
+                background: rgba(255, 255, 255, 0.2);
+                border: 1px solid $accentColour;
+            }
+        }
+        &:nth-child(1) {
+            background: url(../../images/footer-1.png) no-repeat center center;
+        }
+        &:nth-child(2) {
+            background: url(../../images/footer-2.png) no-repeat center center;
+        }
+                &:nth-child(2) &__header-2 {
+                    color: $primaryColour;
+                }
+                &:nth-child(2) &__header-3 {
+                    color: lighten($color: $primaryColour, $amount: 20);
+                }
+                &:nth-child(2) &__link {
+                    color: black;
+                    background: rgba(255, 255, 255, 0.2);
+                    border: 1px solid $accentColour;
+                    &:hover {
+                        border: 1px solid black;
+                        color: $accentColour;
+                        background: rgba(0, 0, 0, 0.3);
+                    }
+                }
+
+
+    }
+}

@@ -7,3 +7,10 @@ $secondaryFont: 'Roboto', sans-serif;
     font-size: ($sizeValue/10) * 1rem;
 }
 
+@mixin fontStyle($ff, $fs, $fw) {
+    font-family: $ff;
+    font-size: $fs * 1px;
+    font-size: ($fs/10) * 1rem;
+    weight: $fw;
+
+}
