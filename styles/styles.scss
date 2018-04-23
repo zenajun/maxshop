@@ -133,7 +133,7 @@ img {
             &__image, &__image--current-promo {
                 display: block;
                 margin: 0 auto;
-                width: 100%;
+                // width: 100%;
             }
             
         }
@@ -195,11 +195,15 @@ img {
 
 // Section 2 and 4: Gallery styles
 .section__gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @media (min-width: 640px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     &__product {
         margin: 0 auto;
+        @media (min-width: 640px) {
+        }
         &__images{
             position: relative;
             &__link {
