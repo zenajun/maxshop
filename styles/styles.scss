@@ -19,8 +19,11 @@ img {
 }
 // Hero header
 .hero-header {
+    @media (min-width: 1040px) {
+        display: flex;
+        justify-content: space-between;
+    }
     padding: 10px;
-    // height: 80vh;
     &__header-container {
         display: flex;
         flex-direction: column;
@@ -29,6 +32,12 @@ img {
             color: $primaryColour;
             @include fontSize(35);
             margin-top: 0;
+            @media (min-width: 1040px) {
+                @include fontSize(80);
+                width: 750px;
+                position: absolute;
+                top: 20%;
+            }
         }
         &__header-2 {
             order: -1;
@@ -62,6 +71,9 @@ img {
         }
     }
     &__image-container {
+        @media (min-width: 1040px) {
+            width: 63%;
+        }
         &__image {
             margin-bottom: 50px;
         }

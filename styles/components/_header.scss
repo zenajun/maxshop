@@ -34,7 +34,7 @@
         }
         @media (min-width: 1040px) {
             flex-direction: row;
-            width: calc(200% / 3);
+            width: 63%;
         }
         &__logo {
             height: 100%;
@@ -53,7 +53,7 @@
             &__item {
                 padding: 10px 0;
                 @media (min-width: 1040px) {
-                    padding: 10px;
+                    padding: 10px 10px 10px 0;
                 }
                 &__link {
                     text-decoration: none;
