@@ -181,7 +181,11 @@ img {
                 padding: 0;
                 list-style: none;
                 display: flex;
-                justify-content: space-around;
+                justify-content: center;
+                @media (min-width: 640px) {
+                    justify-content: flex-end;   
+                    margin-right: 10%;            
+                }
                 &__item {
                     &__link {
                         text-decoration: none;
@@ -189,6 +193,10 @@ img {
                         &:hover {
                             color: $primaryColour; 
                         }
+                    }
+                    &:nth-child(n + 2)::before {
+                        content: '/';
+                        padding: 0 15px;
                     }                    
                 }
             }
@@ -210,6 +218,9 @@ img {
         &__images{
             position: relative;
             &__link {
+                & > * {
+                    margin: 0 auto;
+                }
                 &--buy {
                     position: absolute;
                     background: darken($color: $lighterColour, $amount: 49);
