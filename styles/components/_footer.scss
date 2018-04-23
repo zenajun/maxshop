@@ -75,6 +75,7 @@
                 }
             }
         } 
+        // Tags
         &.tags &__link {
             @include fontSize(14);
             display: inline-block;
@@ -89,9 +90,11 @@
                 color: $accentColour;
             }
         }
+        // Instagram
         &.instagram {
             display: none;
-        }      
+        }   
+        // Newsletter   
         &.newsletter &__header-3 {
             @include fontStyle ($secondaryFont, 16, 400);
         }  
@@ -138,4 +141,37 @@
     }
 
 
+}
+
+// Footer 3: Legal footer
+.footer__legal {
+    background: darken($color: #eeeeee, $amount: 69);
+    padding: 5px;
+    &__copyright {
+        margin: 0;
+    }
+    &__nav {
+        font-family: $secondaryFont;
+        &__list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            &__item {
+                // &:nth-child(n + 2) {
+                //     &::before {
+                //         content: '|';
+                //         color: $lighterColour;
+                //         padding-right: 5px;
+                //     }
+                // }
+                &__link {
+                    text-decoration: none;
+                    color: white;
+                    // padding-left: 6px;
+                }
+
+            }
+        }
+    }
 }
