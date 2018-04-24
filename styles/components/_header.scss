@@ -46,13 +46,16 @@
             padding: 5px 0;
             @media (min-width: 640px) {
                 display: flex;
-                justify-content: space-around;
+                justify-content: flex-start;
             }
             @media (min-width: 1040px) {
                 margin: 0;
             }
             &__item {
                 padding: 10px 0;
+                @media (min-width: 640px) {
+                    padding-right: 20px;
+                }
                 @media (min-width: 1040px) {
                     padding: 10px 25px 10px 0;
                 }
@@ -77,7 +80,7 @@
             flex-direction: column;
             @media (min-width: 640px) {
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: flex-start;
             }
             @media (min-width: 1040px) {
                 margin: 0;
@@ -86,6 +89,9 @@
                 padding: 10px 0px;
                 text-align: right;
                 position: relative;
+                @media (min-width: 640px) {
+                    padding-right: 20px;
+                }
                 @media (min-width: 1040px) {
                     padding: 10px;
                 }
