@@ -65,7 +65,7 @@ img {
             display: none;
             @media (min-width: 1040px) {
                 display: block;
-                @include fontSize(300);
+                @include fontSize(250);
                 color: lighten($color: #333333, $amount: 74);
                 margin: 200px 0 0;
                 line-height: 20rem;
@@ -91,16 +91,19 @@ img {
             text-align: center;
             color: white;
             font-weight: 400;
-            width: 180px;
+            align-self: flex-end;
             @include fontSize(18);
             &:hover {
                 color: $primaryColour;
                 background: transparent;
                 border: 1px solid $primaryColour;
             }
+            @media (min-width: 640px) {
+                align-self: flex-start;
+            }
             @media (min-width: 1040px) {
                     position: absolute;
-                    top: 65%;
+                    top: 50%;
             }
         }
     }
@@ -112,26 +115,25 @@ img {
             // margin-bottom: 50px;
         }
         &__nav {
-            display: flex;
-            justify-content: space-between;
+            // display: flex;
+            // justify-content: space-between;
             position: relative;
             &__list {
                 list-style: none;
                 display: flex;
-                padding: 0;
+                padding: 10px 0;
                 margin: 0;
-                justify-content: space-around;
+                justify-content: center;
                 position: absolute;
                 right: 0;
                 bottom: 0;
                 background: white;
                 &__item {
-                    width: 85px;
-                    height: 80px; // text-align-last: right;
+                    padding: 0 15px;
                     &__link {
-                        @include fontSize(60);
+                        @include fontSize(30);
                         color: lighten($color: $primaryColour, $amount: 20);
-                        padding: 10px;
+                        padding: 0 20px;
                     }
                     &__link:hover {
                         color: $accentColour;
@@ -227,7 +229,10 @@ img {
     }
 }
 
-// Section Header styles
+// Section 2 and 4: Header styles
+.gallery.section__title {
+    margin: 0 45px;
+}
 .section {
     &__header-2 {
         font-family: $primaryFont;
@@ -256,7 +261,7 @@ img {
                 justify-content: center;
                 @media (min-width: 640px) {
                     justify-content: flex-end;   
-                    margin-right: 10%;            
+                    // margin-right: 10%;            
                 }
                 &__item {
                     &__link {
@@ -281,10 +286,10 @@ img {
     @media (min-width: 640px) {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
+        margin: 0 45px;
     }
     &__product {
-        margin: 0 auto;
         @media (min-width: 640px) {
         }
         &__images{
