@@ -227,12 +227,12 @@ img {
             }            
             &__border {
                 margin: 0 auto;
-                @media (min-width: 640px) {
-                    width: 440px;
-                }
+                // @media (min-width: 640px) {
+                //     width: 440px;
+                // }
             }
         }
-        &__link__border::after {
+        &__link__border--box::after {
             content: '';
             width: 80%;
             height: 80%;
@@ -242,9 +242,9 @@ img {
             left: 50%;
             top: 50%;
             transform: translateY(-50%) translateX(-50%);
-            @media (min-width: 640px) {
-                width: 350px;
-            }
+            // @media (min-width: 640px) {
+            //     width: 350px;
+            // }
             
         }
     }
