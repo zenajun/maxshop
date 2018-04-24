@@ -64,18 +64,24 @@
     background: darken($color: $lighterColour, $amount: 46);
     @media (min-width: 1040px) {
         display: flex;
-        justify-content: space-between
+        flex-wrap: wrap;
+        justify-content: center;
     }
     &__container {
         padding: 5px;
         color: white;
         @media (min-width: 1040px) {
-            width: 25%;
+            width: calc(25% - 30px);
             padding-left: 10px;
         }
         &__header-2 {
             text-transform: uppercase;
             color: $accentColour;
+            &.follow-us {
+                @media (min-width: 1040px) {
+                    text-align: center;
+                }
+            }
         }
         // Contact
         &.contact &__list {
@@ -107,6 +113,18 @@
         // Instagram
         &.instagram {
             display: none;
+            @media (min-width: 1040px) {
+                display: block;
+            }           
+        }
+        &__gallery {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 350px;
+            &__image {
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
         }   
         // Newsletter   
         &.newsletter &__header-3 {
@@ -134,7 +152,18 @@
             list-style: none;
             padding: 0;
             display: flex;
+            @media (min-width: 1040px) {
+                justify-content: center;
+            }
             &__item {
+                @media (min-width: 1040px) {
+                    padding-right: 10px;
+                }
+                &:first-child {
+                    @media (min-width: 1040px) {
+                        display: none;
+                    }
+                }
                 &__link {
                     color: white;
                     text-decoration: none;
@@ -142,11 +171,17 @@
                         color: $accentColour;
                     }
                     & span:first-child {
-                        display: none;                    
+                        display: none; 
+                        @media (min-width: 1040px) {
+                            display: inline;
+                        }                   
                     }
                     & span:last-of-type {
                         display: inline-block;
                         padding: 5px;
+                        @media (min-width: 1040px) {
+                            display: none;
+                        }
                     }
                 }
             }
