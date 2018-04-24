@@ -196,6 +196,11 @@
 .footer__legal {
     background: darken($color: #eeeeee, $amount: 69);
     padding: 5px;
+    @media (min-width: 1040px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 5px;
+    }
     &__copyright {
         margin: 0;
     }
@@ -206,17 +211,28 @@
             padding: 0;
             display: flex;
             justify-content: space-between;
+            @media (min-width: 1040px) {
+                justify-content: flex-end;
+                align-items: center;
+                margin: 0;
+            }
             &__item {
-                // &:nth-child(n + 2) {
-                //     &::before {
-                //         content: '|';
-                //         color: $lighterColour;
-                //         padding-right: 5px;
-                //     }
-                // }
+                @media (min-width: 1040px) {
+                    &:nth-child(n + 2) {
+                        &::before {
+                            content: '|';
+                            color: $lighterColour;
+                            padding: 0 5px;
+
+                        }
+                    }
+                }
                 &__link {
                     text-decoration: none;
                     color: white;
+                    &:hover {
+                        color: $accentColour;
+                    }
                 }
             }
         }
