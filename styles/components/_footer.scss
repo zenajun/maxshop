@@ -1,10 +1,17 @@
 // Footer 1: Promotions
 .footer__promo {
     // position: relative;
+    @media (min-width: 1040px) {
+        display: flex;
+        justify-content: center;
+    }
     &__container {
         background-size: cover;
         padding: 50px 0 50px 20%;   
         color: white;
+        @media (min-width: 1040px) {
+            width: 50%;
+        }
         &__header-2 {
             @include fontStyle($primaryFont, 30, 700);
 
@@ -48,19 +55,24 @@
                         background: rgba(0, 0, 0, 0.3);
                     }
                 }
-
-
-    }
+            }
     
 }
 
 // Footer 2: Global footer
-
 .footer__global {
     background: darken($color: $lighterColour, $amount: 46);
+    @media (min-width: 1040px) {
+        display: flex;
+        justify-content: space-between
+    }
     &__container {
         padding: 5px;
         color: white;
+        @media (min-width: 1040px) {
+            width: 25%;
+            padding-left: 10px;
+        }
         &__header-2 {
             text-transform: uppercase;
             color: $accentColour;
