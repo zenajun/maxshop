@@ -560,8 +560,12 @@ img {
     }
     &__author {
         text-transform: uppercase;
-        @include fontSize(15);
+        @include fontSize(10);
         color: darken($color: $lighterColour, $amount: 40);
+        @media (min-width: 640px) {
+        @include fontSize(15);
+
+        }
         @media (min-width: 1040px) {
             transform: rotate(-90deg);
             width: 200px;
