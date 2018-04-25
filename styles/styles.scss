@@ -17,6 +17,16 @@ img {
     max-width: 100%;
     // margin: 0 auto;
 }
+
+.inner-wrapper {
+    @media (min-width: 1180px) {
+        width: 1170px;
+        margin: 0 auto;
+        // max-width: ;
+    }
+}
+
+
 // Hero header
 .hero-header {
     @media (min-width: 1040px) {
@@ -162,6 +172,9 @@ img {
             padding: 25px;
             position: relative;
         }
+        @media (min-width: 1040px) {
+            padding: 0;
+        }
         &__header-2 {
             color: $primaryColour;
             @include fontSize(28);
@@ -234,6 +247,9 @@ img {
 // Section 2 and 4: Header styles
 .gallery.section__title {
     margin: 0 45px;
+     @media (min-width: 1180px) {
+         margin: 0;
+     }
 }
 .section {
     &__header-2 {
@@ -294,6 +310,9 @@ img {
     @media (min-width: 850px) {
         flex-wrap: nowrap;
     }
+    @media (min-width: 1180px) {
+        margin: 0;
+    }
     &__product {
         @media (min-width: 640px) {
         }
@@ -351,24 +370,61 @@ img {
 }
 
 // Section 3: Lookbook
-.lookbook.section {
+.inner-wrapper.lookbook {
     @media (min-width: 1040px) {
         display: flex;
         flex-direction: row-reverse;
-    } 
+    }
+}
+
+.section__container.lookbook {
+    @media (min-width: 1040px) {
+        width: 70%;
+    }
+}
+.lookbook.section {
     &__title {
         @media (min-width: 1040px) {
-            margin-right: 50px;
+            width: 30%;
+            position: relative;
+        }
+        &__header-3 {
+            @include fontSize(30);
+            color: $primaryColour;
+            font-weight: 400;
+            text-align: center;
+            @media (min-width: 1040px) {
+                margin-top: 100px;
+                width: 600px;
+                position: absolute;
+                right: 5px;
+                z-index: 10;
+            }            
         }
         &__header-3, &__para, &__link {
-            margin-top: 100px;
-            text-align: right;
+            @media (min-width: 1040px) {
+                text-align: right;
+            }
+        }
+        &__para {
+            @media (min-width: 1040px) {
+                margin-top: 200px;
+            }
         }
         &__link {
             display: inline-block;
+            text-decoration: none;
+            color: $primaryColour;
+            border: 1px solid $accentColour;
+            padding: 20px 30px;
+            border-radius: 33px;
+            @media (min-width: 1040px) {
+                // display: block;
+            }
         }
     }   
 }
+ 
 
 .section__container {
     position: relative;
@@ -421,27 +477,17 @@ img {
         transform: translateX(-50%);
         background: darken($color: $primaryColour, $amount: 1);
         z-index: 20;
-        // margin: 15px;
-        // padding: 0 20px;
+            @media (min-width: 1040px) {
+                left: 90px;
+                bottom: 50%;
+            }
         &__list {
             list-style: none;
             padding: 0;
             display: flex;
             justify-content: space-between;  
             &__item {
-                &:nth-child(2)::before {
-                    content: '';
-                    height: 35px;
-                    width: 4px;
-                    background: white;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translateY(-50%) translateX(-50%);
-                    z-index: 30;                    
-                    // @include fontSize(20);
-                } 
-                &__link {
+               &__link {
                     color: white;
                     padding: 0 10px;
                     @include fontSize(40);                    
