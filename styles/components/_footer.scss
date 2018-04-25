@@ -1,11 +1,8 @@
 // Footer 1: Promotions
 .footer__promo {
-    background: url(../../images/footer-1.png) no-repeat left center,
-    url(../../images/footer-2.png) no-repeat right center;
-    // position: relative;
     @media (min-width: 1040px) {
-        display: flex;
-        justify-content: center;
+        background: url(../../images/footer-1.png) no-repeat left center, url(../../images/footer-2.png) no-repeat right center;
+        background-size: 50%;
     }
     &__container {
         background-size: cover;
@@ -30,7 +27,20 @@
                 background: rgba(255, 255, 255, 0.2);
                 border: 1px solid $accentColour;
             }
-        }     
+        }    
+        &:nth-child(1) {
+            background-color: black;
+            background: url(../../images/footer-1.png) no-repeat center center;
+            @media (min-width: 1040px) {
+                background: none;
+            }
+        }   
+        &:nth-child(2) {
+            background: url(../../images/footer-2.png) no-repeat center center;
+             @media (min-width: 1040px) {
+                 background: none;
+             }
+        }
         &:nth-child(2) &__header-2 {
             color: $primaryColour;
         }
@@ -48,6 +58,12 @@
             }
         }
     }    
+}
+
+.footer__promo .inner-wrapper {
+    @media (min-width: 1040px) {
+        display: flex;
+    }
 }
 
 // Footer 2: Global footer

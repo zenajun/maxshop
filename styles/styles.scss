@@ -25,6 +25,13 @@ img {
     }
 }
 
+.outer-wrapper {
+    @media (min-width: 1925px) {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
 
 // Hero header
 .hero-header {

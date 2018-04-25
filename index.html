@@ -12,68 +12,70 @@
 <body>
 
     <!-------------- Global nav begins -->
-    <header class="nav-header">
-        <img class="nav-header__global-nav__logo" src="images/logo.png" alt="">
-        <label for="toggle"><i class="fas fa-bars"></i></label>
-        <input type="checkbox" id="toggle">
-        <nav class="nav-header__global-nav">
-            <ul class="nav-header__global-nav__list">
-                <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Home</a></li>
-                <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Shop</a></li>
-                <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Look Book</a></li>
-                <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Contact</a></li>
-                <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Blog</a></li>
-            </ul>        
-            <ul class="nav-header__shopping-nav__list">
-                <li class="nav-header__shopping-nav__list__item">
-                    <select class="nav-header__shopping-nav__list__item__country" name="location" id="flag">
-                        <option id="uk" value="uk" id="uk">UK</option>
-                        <option id="usa" value="usa" style="">US</option>
-                        <option id="france" value="france">FR</option>
-                        <option id="germany" value="germany">DE</option>
-                        <option id="brazil" value="brazil">BR</option>
-                    </select>
-                </li>    
-                <li class="nav-header__shopping-nav__list__item"><a href="#" class="nav-header__shopping-nav__list__item__link"><i class="fas fa-search"></i></a></li>
-                <li class="nav-header__shopping-nav__list__item"><a href="#" class="nav-header__shopping-nav__list__item__link"><i class="far fa-user"></i></a></li>
-                <li class="nav-header__shopping-nav__list__item"><a href="#" class="nav-header__shopping-nav__list__item__link"><i class="fas fa-shopping-bag"></i></a></li>
-            </ul>     
-        </nav>
-    </header>
+    <header class="nav-header outer-wrapper">
+            <img class="nav-header__global-nav__logo" src="images/logo.png" alt="">
+            <label for="toggle"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="toggle">
+            <nav class="nav-header__global-nav">
+                <ul class="nav-header__global-nav__list">
+                    <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Home</a></li>
+                    <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Shop</a></li>
+                    <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Look Book</a></li>
+                    <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Contact</a></li>
+                    <li class="nav-header__global-nav__list__item"><a class="nav-header__global-nav__list__item__link" href="#">Blog</a></li>
+                </ul>        
+                <ul class="nav-header__shopping-nav__list">
+                    <li class="nav-header__shopping-nav__list__item">
+                        <select class="nav-header__shopping-nav__list__item__country" name="location" id="flag">
+                            <option id="uk" value="uk" id="uk">UK</option>
+                            <option id="usa" value="usa" style="">US</option>
+                            <option id="france" value="france">FR</option>
+                            <option id="germany" value="germany">DE</option>
+                            <option id="brazil" value="brazil">BR</option>
+                        </select>
+                    </li>    
+                    <li class="nav-header__shopping-nav__list__item"><a href="#" class="nav-header__shopping-nav__list__item__link"><i class="fas fa-search"></i></a></li>
+                    <li class="nav-header__shopping-nav__list__item"><a href="#" class="nav-header__shopping-nav__list__item__link"><i class="far fa-user"></i></a></li>
+                    <li class="nav-header__shopping-nav__list__item"><a href="#" class="nav-header__shopping-nav__list__item__link"><i class="fas fa-shopping-bag"></i></a></li>
+                </ul>     
+            </nav>
+        </header>
     <!------------ Global nav ends -->
 
     <!------------- Hero header begins -->
-    <header class="hero-header">
-        <div class="hero-header__header-container">
-            <h1 class="hero-header__header-container__header-primary">Summer collection 2016 &rdquo;</h1>
-            <h2 class="hero-header__header-container__header-2">Bring glamour to your wardrobe</h2>
-            <h3 class="hero-header__header-container__header-3">26/02/2016</h3>
-            <h4 class="hero-header__header-container__header-4">01</h4>
-            <img class="hero-header__header-container__icon" src="images/icon.png" alt="Navigation menu">
-            <a class="hero-header__header-container__link" href="#">View More</a>
-        </div>
-        <div class="hero-header__image-container">
-            <img class="hero-header__image-container__image" src="images/main-image-1.png" alt="White dresses hanging on white hangers">
-            <nav class="hero-header__image-container__nav" >
-                <ul class="hero-header__image-container__nav__list">
-                    <li class="hero-header__image-container__nav__list__item">
-                        <a  class="hero-header__image-container__nav__list__item__link"href="#">
-                            <i class="fas fa-angle-left"></i>
-                        </a>
-                    </li>
-                    <li class="hero-header__image-container__nav__list__item">
-                        <a  class="hero-header__image-container__nav__list__item__link"href="#">
-                            <i class="fas fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>           
-        </div>        
-    </header>
+    <!-- <div class="outer-wrapper"> -->
+    <header class="hero-header outer-wrapper">
+            <div class="hero-header__header-container">
+                <h1 class="hero-header__header-container__header-primary">Summer collection 2016 &rdquo;</h1>
+                <h2 class="hero-header__header-container__header-2">Bring glamour to your wardrobe</h2>
+                <h3 class="hero-header__header-container__header-3">26/02/2016</h3>
+                <h4 class="hero-header__header-container__header-4">01</h4>
+                <img class="hero-header__header-container__icon" src="images/icon.png" alt="Navigation menu">
+                <a class="hero-header__header-container__link" href="#">View More</a>
+            </div>
+            <div class="hero-header__image-container">
+                <img class="hero-header__image-container__image" src="images/main-image-1.png" alt="White dresses hanging on white hangers">
+                <nav class="hero-header__image-container__nav" >
+                    <ul class="hero-header__image-container__nav__list">
+                        <li class="hero-header__image-container__nav__list__item">
+                            <a  class="hero-header__image-container__nav__list__item__link"href="#">
+                                <i class="fas fa-angle-left"></i>
+                            </a>
+                        </li>
+                        <li class="hero-header__image-container__nav__list__item">
+                            <a  class="hero-header__image-container__nav__list__item__link"href="#">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>           
+            </div>        
+        </header>
+    <!-- </div> -->
     <!---------- Hero header ends -->
 
     <!------------ Main begins -->
-    <main>
+    <main class="outer-wrapper">
         <!-------------- Section: Current promotions begins -->
         <section class="section current-promo">
             <div class="section__container">
@@ -350,8 +352,8 @@
     
     <!---------------- Hero Footer begins -->
     <footer class="footer__promo">
-        <div class="footer__promo__container discover">
-            <div class="inner-wrapper">
+        <div class="inner-wrapper">
+            <div class="footer__promo__container">
                 <h2 class="footer__promo__container__header-2">Rehing Your Design</h2>
                 <h3 class="footer__promo__container__header-3">Minimal & Modern looking</h3>
                 <a class="footer__promo__container__link" href="#">Discover More</a>
