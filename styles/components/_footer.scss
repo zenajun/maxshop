@@ -29,8 +29,8 @@
             }
         }    
         &:nth-child(1) {
-            background-color: black;
             background: url(../../images/footer-1.png) no-repeat center center;
+            background-color: black;
             @media (min-width: 1040px) {
                 background: none;
             }
@@ -69,16 +69,18 @@
 // Footer 2: Global footer
 .footer__global {
     background: darken($color: $lighterColour, $amount: 46);
-    @media (min-width: 1040px) {
+    .inner-wrapper {
+        @media (min-width: 1040px) {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
+        }
     }
     &__container {
         padding: 5px;
         color: white;
         @media (min-width: 1040px) {
-            width: calc(25% - 30px);
+            width: 25%;
             padding-left: 10px;
         }
         &__header-2 {
@@ -142,6 +144,7 @@
             &--email {
                 border: 1px solid white;
                 color: white;
+                max-width: 185px;
                     &[placeholder] {
                         background: transparent;
                         padding: 15px;
@@ -153,6 +156,11 @@
                 padding: 15px;
                 background:transparent;
 
+            }
+        }
+        &.follow-us {
+            @media (min-width: 1040px) {
+                width: 100%;
             }
         }
         &.follow-us &__list{
@@ -193,20 +201,19 @@
                 }
             }
         } 
-
     }
-
-
 }
 
 // Footer 3: Legal footer
 .footer__legal {
     background: darken($color: #eeeeee, $amount: 69);
     padding: 5px;
-    @media (min-width: 1040px) {
-        display: flex;
-        justify-content: space-between;
-        padding: 25px 5px;
+    .inner-wrapper {
+        @media (min-width: 1040px) {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 5px;
+        }
     }
     &__copyright {
         margin: 0;

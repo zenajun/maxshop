@@ -15,7 +15,6 @@ body {
 img {
     display: block;
     max-width: 100%;
-    // margin: 0 auto;
 }
 
 .inner-wrapper {
@@ -50,6 +49,7 @@ img {
             margin-top: 0;
             @media (min-width: 1040px) {
                 @include fontSize(80);
+                margin-top: 50px;
                 width: 750px;
                 position: absolute;
                 top: 15%;
@@ -61,12 +61,19 @@ img {
             @include fontSize(20);
             font-weight: 400;
             order: -2;
+            @media (min-width: 1180px) {
+                @include fontSize(28);
+
+            }
         }
         &__header-3 {
             color: $primaryColour;
             @include fontSize(16);
             font-weight: 400;
             order: -3;
+            @media (min-width: 1180px) {
+                @include fontSize(30);
+            }
         }
         &__header-3::after {
             content: '';
@@ -76,6 +83,10 @@ img {
             background: lighten($color: $primaryColour, $amount: 42);
             top: 45px;
             left: 0;
+            @media (min-width: 1180px) {
+                top: 70px;
+                width: 45px;
+            }
         }
         &__header-4 {
             display: none;
@@ -86,6 +97,10 @@ img {
                 margin: 200px 0 0;
                 line-height: 20rem;
                 font-weight: 400;
+                @media (min-width: 1920px) {
+                    @include fontSize(500);
+                    margin-top: 300px;
+                }
             }
         }
         &__icon {
@@ -116,9 +131,11 @@ img {
                 border: 1px solid $primaryColour;
             }
             @media (min-width: 1040px) {
-                margin-top: 30px;
-                    position: absolute;
-                    top: 50%;
+                margin-top: 350px;
+                position: absolute;
+            }
+            @media (min-width: 1920px) {
+                margin-top: 500px;
             }
         }
     }
@@ -179,7 +196,7 @@ img {
             position: relative;
         }
         @media (min-width: 1040px) {
-            padding: 0;
+            padding: 30px;
         }
         &__header-2 {
             color: $primaryColour;
@@ -209,7 +226,7 @@ img {
                 margin: 0;
                 transform: rotate(-90deg);
                 position: absolute;
-                left: -90px;
+                left: -60px;
                 top: 35%;                
                 z-index: 10;
                 &::before {
@@ -258,12 +275,31 @@ img {
      }
 }
 .section {
+    position: relative;
     &__header-2 {
         font-family: $primaryFont;
         color: lighten($color: $primaryColour, $amount: 60);
         font-weight: 400;
         @include fontSize(35);
         text-align: center;
+    }
+    .season {
+        @media (min-width: 1920px) {
+            @include fontSize(70);
+            transform: rotate(90deg);
+            position: absolute;
+            right: -200px;
+            top: 35%;            
+        }
+    }   
+    .sales {
+        @media (min-width: 1920px) {
+            @include fontSize(70);
+            transform: rotate(-90deg);
+            position: absolute;
+            left: 0;
+            top: 35%;
+        }
     }
     &__header-3 {
         font-family: $primaryFont;
@@ -304,6 +340,7 @@ img {
         }    
     }
 }
+
 
 // Section 2 and 4: Gallery styles
 .section__gallery {
