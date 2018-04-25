@@ -1,7 +1,7 @@
 // Footer 1: Promotions
 .footer__promo {
     @media (min-width: 1040px) {
-        background: url(../../images/footer-1.png) no-repeat left center, url(../../images/footer-2.png) no-repeat right center;
+        background: url(../images/footer-1.png) no-repeat left center, url(../images/footer-2.png) no-repeat right center;
         background-size: 50%;
     }
     &__container {
@@ -29,14 +29,14 @@
             }
         }    
         &:nth-child(1) {
-            background: url(../../images/footer-1.png) no-repeat center center;
+            background: url(../images/footer-1.png) no-repeat center center;
             background-color: black;
             @media (min-width: 1040px) {
                 background: none;
             }
         }   
         &:nth-child(2) {
-            background: url(../../images/footer-2.png) no-repeat center center;
+            background: url(../images/footer-2.png) no-repeat center center;
              @media (min-width: 1040px) {
                  background: none;
              }
