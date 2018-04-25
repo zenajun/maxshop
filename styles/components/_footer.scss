@@ -1,5 +1,7 @@
 // Footer 1: Promotions
 .footer__promo {
+    background: url(../../images/footer-1.png) no-repeat left center,
+    url(../../images/footer-2.png) no-repeat right center;
     // position: relative;
     @media (min-width: 1040px) {
         display: flex;
@@ -28,32 +30,24 @@
                 background: rgba(255, 255, 255, 0.2);
                 border: 1px solid $accentColour;
             }
-        }    
-        &:nth-child(1) {
-            background-color: black;
-            background: url(../../images/footer-1.png) no-repeat center center;
-        }   
-        &:nth-child(2) {
-            background: url(../../images/footer-2.png) no-repeat center center;
+        }     
+        &:nth-child(2) &__header-2 {
+            color: $primaryColour;
         }
-                &:nth-child(2) &__header-2 {
-                    color: $primaryColour;
-                }
-                &:nth-child(2) &__header-3 {
-                    color: lighten($color: $primaryColour, $amount: 20);
-                }
-                &:nth-child(2) &__link {
-                    color: black;
-                    background: rgba(255, 255, 255, 0.2);
-                    border: 1px solid $accentColour;
-                    &:hover {
-                        border: 1px solid black;
-                        color: $accentColour;
-                        background: rgba(0, 0, 0, 0.3);
-                    }
-                }
+        &:nth-child(2) &__header-3 {
+            color: lighten($color: $primaryColour, $amount: 20);
+        }
+        &:nth-child(2) &__link {
+            color: black;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid $accentColour;
+            &:hover {
+                border: 1px solid black;
+                color: $accentColour;
+                background: rgba(0, 0, 0, 0.3);
             }
-    
+        }
+    }    
 }
 
 // Footer 2: Global footer
